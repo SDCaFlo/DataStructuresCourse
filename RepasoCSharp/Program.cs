@@ -13,10 +13,21 @@
 //Console.WriteLine(decimal2);
 //Console.WriteLine(decimal1); //Todos los valores se observan
 
-Console.WriteLine("Ingrese un número.");
-int num = int.Parse(Console.ReadLine());
 
-for(int i=1; i <= num; i++)
+using System;
+
+namespace RepasoCSharp
 {
-    Console.WriteLine(i);
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Test Código");
+            LinkedList lista = new LinkedList();
+            lista.AppendNode(1);
+            lista.AppendNode(2);
+            lista.PrintValues();
+            Console.WriteLine("éxito");
+        }
+    }
 }

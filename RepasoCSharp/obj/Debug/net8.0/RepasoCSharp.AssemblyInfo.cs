@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RepasoCSharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+112a22d35de7a78e16f9edf2a7119f060e3bc8d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1d31fb034c81dda45a33be406e3078040acf1f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("RepasoCSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RepasoCSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
