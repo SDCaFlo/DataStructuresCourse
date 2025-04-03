@@ -74,5 +74,69 @@ namespace RepasoCSharp
                 }
             }
         }
+
+        public bool SearchValue(int valor)
+        {
+            // Método para buscar un valor
+            if (HeadNode == null)
+            {
+                Console.WriteLine("No hay valores");
+                return false;
+            }
+
+            Node? currentNode = HeadNode;
+            while (currentNode != null)
+            {
+                if (currentNode.Valor == valor)
+                {
+                    return true;
+                }
+                currentNode = currentNode.NextNode;
+            }
+            return false; //si no se encuentra
+        }
+
+
+        public void DeleteElement(int valor)
+        {
+            if (HeadNode == null) // si no se encuentra valores.
+            {
+                Console.WriteLine("No hay valores");
+                return;
+            }
+
+            if (HeadNode.Valor == valor) //Si el valor está a la cabeza. debemos modificar el headnode
+            {
+                HeadNode = HeadNode.NextNode;
+                if (HeadNode == null)
+                { // Si la lista queda vacía
+                    LastNode = null; 
+                } 
+                Console.WriteLine("Elemento eliminado");
+                return;
+            }
+
+
+            Node? currentNode = HeadNode;
+
+            while (currentNode.NextNode != null) // Iteración elemento por elemento.
+            {
+                if (currentNode.NextNode.Valor == valor)
+                {
+                    currentNode.NextNode = currentNode.NextNode.NextNode; // Chequeamos el valor del siguiente nodo, para evitar retroceder.
+                    
+                    if (currentNode.NextNode == null) { 
+                        LastNode =  currentNode; 
+                    }
+                    Console.WriteLine("Elemento Eliminado");
+                    return;
+
+                }
+                currentNode = currentNode.NextNode;
+            }
+
+            Console.WriteLine("No se encontró el valor");
+
+        }
     }
 }

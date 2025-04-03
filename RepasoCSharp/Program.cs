@@ -26,8 +26,28 @@ namespace RepasoCSharp
             LinkedList lista = new LinkedList();
             lista.AppendNode(1);
             lista.AppendNode(2);
+            lista.AppendNode(3);
+            lista.AppendNode(4);
+            lista.AppendNode(5);
+            lista.AppendNode(6);
+            lista.AppendNode(7);
+            lista.AppendNode(8);
             lista.PrintValues();
-            Console.WriteLine("éxito");
+            //buscamos el valor -1
+            if (lista.SearchValue(-1)){
+                Console.WriteLine("Se encontró el valor");
+            }
+            else
+            {
+                Console.WriteLine("No se encontró el valor");
+            }
+                Console.WriteLine("éxito");
+
+            lista.DeleteElement(8);
+            lista.DeleteElement(1);
+            lista.DeleteElement(-3);
+            lista.DeleteElement(3);
+            lista.PrintValues();
         }
     }
 }
